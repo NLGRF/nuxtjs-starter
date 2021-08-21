@@ -1,6 +1,7 @@
 import { projects } from "./utils/projectsData"
 export default {
-  target: 'static',
+  mode: 'universal',
+  // target: 'static',
   ssr: true,
   /*
   ** Headers of the page

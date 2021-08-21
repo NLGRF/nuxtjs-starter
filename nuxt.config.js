@@ -1,4 +1,4 @@
-
+import { projects } from "./utils/projectsData"
 export default {
   mode: 'universal',
   /*
@@ -50,6 +50,18 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+  },
+
+  generate: {
+    async routes() {
+      const paths = [];
+
+      projects.forEach(project => {
+        paths.push(`/project/${project.slug}`);
+      });
+
+      return paths;
     }
   }
 }

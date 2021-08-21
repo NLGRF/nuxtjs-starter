@@ -1,6 +1,5 @@
 import { projects } from "./utils/projectsData"
 export default {
-  mode: 'universal',
   target: 'static',
   ssr: true,
   /*
